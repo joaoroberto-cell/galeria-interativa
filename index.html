@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Mosaico - Filtros</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Galeria de imagens</h1>
+        <p>Explore nossas imagens por categoria</p>
+    </header>
+
+    <!-- Filtros -->
+    <nav class="filtros">
+        <button class="filtro ativo" data-filtro="todas">Todas</button>
+        <button class="filtro" data-filtro="celeste">Celeste</button>
+        <button class="filtro" data-filtro="ori">Ori Will Of The Wisps</button>
+        <button class="filtro" data-filtro="enigmaDoMedo">Enigma Do Medo</button>
+    </nav>
+
+    <p id="totalImagens" class="total"></p>
+
+    <!-- Galeria -->
+    <main class="galeria">
+        <img src="./img/foto1.png" alt="MADLINE & BADLINE" tabindex="0" class="miniatura destaque" data-categoria="celeste"
+        data-descricao="Uma imagem da Madline e a Badline brincando nas nuvens do capítulo 4">
+
+        <img src="./img/foto2.jpg" alt="PICO DA MONTANHA" class="miniatura horizontal" tabindex="0" data-categoria="celeste"
+        data-descricao="Uma imagem do Pico da montanha no final do capítulo 7">
+
+        <img src="./img/foto3.jpg" alt="MADLINE & FITA B SIDE" class="miniatura" tabindex="0" data-categoria="celeste"
+        data-descricao="Uma fanart da Madline segurando uma fita do lado B. O lado B é o outro lado de um capítulo, só que mais difícil">
+
+        <img src="./img/foto4.jpg" alt="CAPA - CELESTE" class="miniatura vertical" tabindex="0" data-categoria="celeste"
+        data-descricao="Capa de celeste para nintendo switch">
+
+        <img src="./img/foto5.jpg" alt="NARU & ORI" class="miniatura" tabindex="0" data-categoria="ori"
+        data-descricao="Ilustração feita por fã, onde o Ori está com seu pai de consideração Naru">
+
+        <img src="./img/foto6.jpg" alt="CAPA - ORI AND WILL OF THE WISPS" class="miniatura horizontal" tabindex="0" data-categoria="ori"
+        data-descricao="Capa de Ori and Will of the Wisps para PC">
+
+        <img src="./img/foto7.jpg" alt="ORI & KU" class="miniatura" tabindex="0" data-categoria="ori"
+        data-descricao="Imagem do Ori e Ku, uma corujinha que nos acompanha na história do jogo">
+
+        <img src="./img/foto8.jpg" alt="MIA & LUPI" class="miniatura" tabindex="0" data-categoria="enigmaDoMedo"
+        data-descricao="Foto atrás da carteira de habilitação do Veríssimo da Mia e do Lupi juntos">
+
+        <img src="./img/foto9.jpg" alt="OLHO DO DESASSOMBRADO" class="miniatura horizontal" tabindex="0" data-categoria="enigmaDoMedo"
+        data-descricao="Olho do Desassombrado na caverna de Cristais no Perímetro">
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <button id="fechar" class="fechar">&times;</button>
+        <button id="anterior" class="navegacao anterior">&#10094;</button>
+        <div class="modal-conteudo">
+            <img src="" alt="Imagem ampliada" id="imagemModal">
+            <div class="legenda">
+                <span id="contador"></span>
+                <span id="nomeImagem"></span>
+                <hr>
+                <span id="data-legenda"></span>
+            </div>
+        </div>
+        <button id="proximo" class="navegacao proximo">&#10095;</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
